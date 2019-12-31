@@ -1,10 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import BlogRoll from "../components/BlogRoll";
+import Scroll from "../components/Scroll";
+import config from "../../config";
 
 export const IndexPageTemplate = ({
   image,
@@ -13,9 +15,30 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description,
-  intro,
+  intro
 }) => (
   <div>
+    <section id="banner">
+      <div className="inner">
+        <h2>{config.heading}</h2>
+        <p>{config.subHeading}</p>
+        {/* <ul className="actions special">
+          <li>
+            <Scroll type="id" element="one">
+              <a href="/#" className="button primary">
+                Explore
+              </a>
+            </Scroll>
+          </li>
+        </ul> */}
+      </div>
+      {/* <Scroll type="id" element="one">
+        <a href="#one" className="more">
+          Learn More
+        </a>
+      </Scroll> */}
+    </section>
+    {/*
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -111,8 +134,9 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
+        */}
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -122,12 +146,12 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
+    blurbs: PropTypes.array
+  })
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -141,18 +165,18 @@ const IndexPage = ({ data }) => {
         intro={frontmatter.intro}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -190,4 +214,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
