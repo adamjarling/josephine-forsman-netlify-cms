@@ -22,10 +22,10 @@ export default function Nav({ onMenuToggle = () => {} }) {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">Sahara Hotnights</Link>
+                <a href="https://www.saharahotnights.com/">Sahara Hotnights</a>
               </li>
               <li>
-                <Link to="/booking">Loud Music Program</Link>
+                <a href="http://www.loudprogram.com/">Loud Music Program</a>
               </li>
             </ul>
             <a
