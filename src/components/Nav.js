@@ -8,7 +8,7 @@ export default function Nav({ onMenuToggle = () => {} }) {
         <li className="special">
           <a
             href="#menu"
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               onMenuToggle();
             }}
@@ -25,12 +25,14 @@ export default function Nav({ onMenuToggle = () => {} }) {
                 <a href="https://www.saharahotnights.com/">Sahara Hotnights</a>
               </li>
               <li>
-                <a href="http://www.loudprogram.com/">Loud Music Program</a>
+                <a href="https://www.loudprogramsweden.com/">
+                  Loud Program Sweden
+                </a>
               </li>
             </ul>
             <a
               className="close"
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
                 onMenuToggle();
               }}

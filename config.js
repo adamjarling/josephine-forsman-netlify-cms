@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "Josephine Forsman", // <title>
-  manifestName: "Spectral",
-  manifestShortName: "Landing", // max 12 characters
+  manifestName: "Josephine Forsman",
+  manifestShortName: "Josephine Forsman", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: "#ffffff",
   manifestThemeColor: "#ffffff",
@@ -16,19 +16,19 @@ module.exports = {
       style: "brands",
       icon: "fa-facebook",
       name: "Facebook",
-      url: "https://www.facebook.com/josephineforsman.drums/"
+      url: "https://www.facebook.com/josephineforsman.drums/",
     },
     {
       style: "brands",
       icon: "fa-instagram",
       name: "Instagram",
-      url: "https://www.instagram.com/josephine_forsman"
+      url: "https://www.instagram.com/josephine_forsman",
     },
     {
       style: "solid",
       icon: "fa-envelope",
       name: "Email",
-      url: "mailto:joseffa.forsman@gmail.com"
-    }
-  ]
+      url: "mailto:joseffa.forsman@gmail.com",
+    },
+  ],
 };
